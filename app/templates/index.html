@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app_name }} | AWS DevOps</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <span class="eyebrow">AWS DEVOPS PROJECT</span>
+            <h1>{{ app_name }}</h1>
+            <p>Application deployment and infrastructure health dashboard.</p>
+        </header>
+
+        <section class="status-card">
+            <span class="status-indicator"></span>
+            <div>
+                <h2>Application is running</h2>
+                <p>Your Flask application is responding to HTTP requests.</p>
+            </div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <span class="label">Application Version</span>
+                <h2>{{ app_version }}</h2>
+            </article>
+
+            <article class="card">
+                <span class="label">Environment</span>
+                <h2>{{ app_env }}</h2>
+            </article>
+
+            <article class="card">
+                <span class="label">Framework</span>
+                <h2>Flask</h2>
+            </article>
+
+            <article class="card">
+                <span class="label">Deployment Platform</span>
+                <h2>AWS / Kubernetes</h2>
+            </article>
+        </section>
+
+        <section class="endpoints">
+            <h2>Health Endpoints</h2>
+            <p><code>/health</code> — application health</p>
+            <p><code>/ready</code> — readiness check</p>
+            <p><code>/version</code> — version information</p>
+        </section>
+
+        <footer>
+            Built as an end-to-end AWS DevOps learning project.
+        </footer>
+    </main>
+</body>
+</html>
